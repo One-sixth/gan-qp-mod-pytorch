@@ -30,30 +30,30 @@ Fixup init.
 Replace DeConv with Upsample+Conv.  
 
 # Dependent
-python 3.7.1
-pytorch 1.0.1
-numpy 1.16.2
-imageio
-opencv-python
+python 3.7.1  
+pytorch 1.0.1  
+numpy 1.16.2  
+imageio  
+opencv-python  
 
 # Generate an image
-if you want to try model_1
-just run
+if you want to try model_1  
+just run  
 ```
 python3 test.py
 ```
 
-if you want to try model_2
-just run
+if you want to try model_2  
+just run  
 ```
 python3 test2.py
 ```
 
 # Train on you dataset
-For Model 1
-Delete all weight.
-edit file gan-qp-torch.py
-change
+For Model 1  
+Delete all weight.  
+edit file gan-qp-torch.py  
+change  
 ```
 img_dir = r'../datasets/faces/*.jpg'
 ```
@@ -61,15 +61,15 @@ to
 ```
 img_dir = r'your/datasets/path/*.jpg'
 ```
-change batch_size (line 144. Requires batch_size is multiple of 4 because minibatch_stddev.
-if you VRAM is 3GB, I suggest set to 12
-save file
-run
+change batch_size (line 144. Requires batch_size is multiple of 4 because minibatch_stddev.  
+if you VRAM is 3GB, I suggest set to 12  
+save file  
+run  
 ```
 python3 gan-qp-torch.py
 ```
-Then the training started.
-Model 2 operations are similar to the above.
+Then the training started.  
+Model 2 operations are similar to the above.  
 
 # References
 - GAN-QP: A Novel GAN Framework without Gradient Vanishing and Lipschitz Constraint [[arXiv](https://arxiv.org/abs/1811.07296)]
