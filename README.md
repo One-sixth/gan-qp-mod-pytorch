@@ -17,6 +17,9 @@ model_1 16000 iters
 model_2 12800 iters  
 ![model 2](https://github.com/One-sixth/gan-qp-mod-pytorch/blob/master/samples2/test_12800.jpg)
 
+model_3 10000 iters
+![model 2](https://github.com/One-sixth/gan-qp-mod-pytorch/blob/master/samples3/test_10000.jpg)
+
 # Modify place
 Model_1  
 Fewer convolution kernel.  
@@ -28,6 +31,9 @@ Fewer convolution kernel.
 Added minibatch_stddev layer.  
 Fixup init.  
 Replace DeConv with Upsample+Conv.  
+
+Model_3  
+Just replace 5x5 convolution to 3x3 convolution.
 
 # Dependent
 python 3.7.1  
