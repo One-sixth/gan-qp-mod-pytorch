@@ -30,6 +30,8 @@ class FaceDataset(Dataset):
         im = cv2.resize(im, self.img_hw, interpolation=cv2.INTER_CUBIC)
         if im.ndim == 2:
             im = np.tile(im[..., None], (1, 1, 3))
+        elif im.shape[2] == 4:
+            im = im[:, :, :3]
         im = im.astype(np.float32) / 255 * 2 - 1
         im = im.transpose(2, 0, 1)
         return im
